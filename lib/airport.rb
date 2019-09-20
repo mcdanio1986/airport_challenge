@@ -1,14 +1,18 @@
 require_relative 'plane'
 
-
 class Airport
+MAX_PLANES = 10
+att_accessor :capacity :landed_planes
 
-def initialize
+def initialize (capacity = MAX_PLANES)
+  @capacity = capacity
+  weather
   @planes = []
+  @landed_planes = []
 end
 
 def land_plane(plane)
-raise 'Unable to land due to srimy weather.' if bad_weather?
+raise 'Unable to land due to stormy weather.' if bad_weather?
 @planes.push(plane)
 return 'Plane has landed.'
 end
@@ -34,7 +38,7 @@ end
     end
 
 def bad_weather?
-@weather = 'stormy'
+@weather == 'stormy'
 end
 
 
