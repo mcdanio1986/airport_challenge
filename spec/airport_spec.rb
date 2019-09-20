@@ -8,14 +8,13 @@
 #As an air traffic controller
 #To ensure safety
 #I want to prevent landing when the airport is full
-
 require 'airport'
-require 'plane'
 
+describe Airport do
 
-describe airport do
-
-
+it 'plane landing at the airport' do
+  airport = Airport.new
+  expect(airport.land_plane).to eq true 
 end
 
-describe 'plane landing at the airport' do
+end
