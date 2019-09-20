@@ -29,6 +29,10 @@ end
       @weather
     end
 
+def bad_weather?
+@weather = 'stormy'
+end
+
 
 
 
