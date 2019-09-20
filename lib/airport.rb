@@ -8,11 +8,15 @@ def initialize
 end
 
 def land_plane(plane)
-true
+raise 'Unable to land due to srimy weather.' if bad_weather?
+@planes.push(plane)
+return 'Plane has landed.'
 end
 
 def take_off(plane)
+  raise 'Unable to takeoff due to stormy weather.' if bad_weather?
 @planes.pop(plane)
+return 'Plane has taken off.'
 end
 
 def check_planes(plane)
@@ -26,7 +30,7 @@ end
       else
         @weather = 'stormy'
       end
-      @weather
+      #@weather
     end
 
 def bad_weather?
