@@ -9,6 +9,7 @@
 #To ensure safety
 #I want to prevent landing when the airport is full
 require 'airport'
+require 'plane'
 
 describe Airport do
 
