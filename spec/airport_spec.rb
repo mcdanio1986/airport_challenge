@@ -14,7 +14,13 @@ describe Airport do
 
 it 'plane landing at the airport' do
   airport = Airport.new
-  expect(airport.land_plane).to eq true 
+  expect(airport.land_plane).to eq true
 end
+
+it 'planer take off from the airport' do
+  airport = Airport.new
+  expect(airport.take_off).to eq true
+end
+
 
 end

@@ -1,7 +1,11 @@
 class Airport
 
 def land_plane
-true 
+true
+end
+
+def take_off
+true
 end
 
 end
