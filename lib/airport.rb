@@ -19,5 +19,18 @@ def check_planes(plane)
   @planes.include?(plane)
 end
 
+  def weather
+    today_weather = rand(10)
+      if (0..8).cover?(today_weather)
+        @weather = 'sunny'
+      else
+        @weather = 'stormy'
+      end
+      @weather
+    end
+
+
+
+
 
 end
